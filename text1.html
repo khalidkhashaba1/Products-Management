@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="اداره منتاجات و,اداره المنتجات, ترتيب المنتجات,منتجات,اداره">
+    <meta name="description" content="موقع اداره المنتجات من صنع خالد خشبة">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>khashaba لاداره المنتجات</title>
+    <link rel="stylesheet" href="text1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    
+    <div class="khashaba">
+        <div class="head">
+            <h2>khashaba</h2>
+            <p>مشروع اداره المنتجات</p>
+        </div>
+        <div class="inputs">
+            <input placeholder="الاسم" id="title" type="text" maxlength="16">
+            <div class="price">
+                <input onkeyup="gettotal()" id="price" placeholder="السعر" type="number" max="1000000">
+                <input onkeyup="gettotal()" id="taxes" placeholder="الضرائب" type="number" max="1000000">
+                <!--<input onkeyup="gettotal()" id="ads" placeholder="الاعلانات" type="number">-->
+                <input onkeyup="gettotal()" id="discount" placeholder="الخصم" type="number" max="1000000">
+                <small id="total"></small>
+            </div>
+            <input id="count" placeholder="العدد"  type="number">
+            <input id="category" placeholder="نوع"  type="text" maxlength="16">
+            <button id="submit">انشاء</button>
+        </div>
+        <div class="outputs">
+            <div class="searchblock">
+                <input onkeyup="searchdata(this.value)" id="search" placeholder="بحث" type="text">
+                <div class="btnsearch">
+                    <button onclick="getsearchmood(this.id)" id="searchtitle">البحث بالعنوان</button>
+                    <button onclick="getsearchmood(this.id)" id="searchcategory">البحث بالنوع</button>
+                </div>
+
+            </div>
+        <div id="deleteall"></div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>العنوان</th>
+                    <th>السعر</th>
+                    <th>الضرائب</th>
+                    <!--<th>الاعلانات</th>-->
+                    <th>الخصم</th>
+                    <th>المجموع</th>
+                    <th>النوع</th>
+                    <th>تعديل</th>
+                    <th>حذف</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button id="scrollup" onclick="scrollup()"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <footer class="extra">
+        <h2 class="h2">khalid khashaba هذا المشروع من صنع</h2>
+        <p class="p">360px<bdi>هذا مشروع لاداره منتاجات وحساب السعر الاجمالي وحفظها وهذا المشروع لا يعمل علي هواتف اقل من</bdi></p>
+    </footer>
+
+    
+
+
+
+
+    <script src="text1.js"></script>
+</body>
+</html>     
